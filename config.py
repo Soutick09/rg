@@ -31,10 +31,8 @@ if OWNER_ID and OWNER_ID not in ADMINS:
 
 # Optional variables
 LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002434243644"))  # Default to 0
-UPDATE_CHANNEL = int(os.environ.get("UPDATE_CHANNEL", "-1002481328926"))  # Default to 0
 BROADCAST_AS_COPY = is_enabled(os.environ.get("BROADCAST_AS_COPY", "False"), False)
 IS_PRIVATE = is_enabled(os.environ.get("IS_PRIVATE", "False"), False)
-SOURCE_CODE = os.environ.get("SOURCE_CODE", "https://t.me/Soutick_09")
 WELCOME_IMAGE = os.environ.get("WELCOME_IMAGE", "")
 LINK_BYPASS = is_enabled(os.environ.get("LINK_BYPASS", "False"), False)
 BASE_SITE = os.environ.get("BASE_SITE", "rglinks.com")
