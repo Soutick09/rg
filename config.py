@@ -16,26 +16,26 @@ def is_enabled(value, default):
 
 # Mandatory variables for the bot to start
 # API ID from https://my.telegram.org/auth
-API_ID = int(os.environ.get("API_ID"))
+API_ID = int(os.environ.get("26975590"))
 # API Hash from https://my.telegram.org/auth
-API_HASH = os.environ.get("API_HASH")
-BOT_TOKEN = os.environ.get("BOT_TOKEN")  # Bot token from @BotFather
+API_HASH = os.environ.get("9fa30733d7a99b212485393e6b5c5ceb")
+BOT_TOKEN = os.environ.get("7299530631:AAG9DMwZxO4FO3_3n4m7ah_4JWhvGgG2P1c")  # Bot token from @BotFather
 ADMINS = (
-    [int(i.strip()) for i in os.environ.get("ADMINS").split(",")]
-    if os.environ.get("ADMINS")
+    [int(i.strip()) for i in os.environ.get("5827289728").split(",")]
+    if os.environ.get("5827289728")
     else []
 )
 
-DATABASE_NAME = os.environ.get("DATABASE_NAME", "MdiskConvertor")
+DATABASE_NAME = os.environ.get("DATABASE_NAME", "Shortnerbot")
 DATABASE_URL = os.environ.get(
-    "DATABASE_URL", None
+    "mongodb+srv://shortnerbot:GkeGvUjcRGOunkoi@shortnerbot.cfwbjti.mongodb.net/?retryWrites=true&w=majority&appName=Shortnerbot", None
 )  # mongodb uri from https://www.mongodb.com/
-OWNER_ID = int(os.environ.get("-1002055492676"))  # id of the owner
+OWNER_ID = int(os.environ.get("7272399911"))  # id of the owner
 ADMINS.append(OWNER_ID) if OWNER_ID not in ADMINS else []
 
 #  Optionnal variables
 LOG_CHANNEL = int(
-    os.environ.get("LOG_CHANNEL", "-1002055492676")
+    os.environ.get("LOG_CHANNEL", "-1002434243644")
 )  # log channel for information about users
 UPDATE_CHANNEL = int(os.environ.get(
     "UPDATE_CHANNEL", True))  # For Force Subscription
