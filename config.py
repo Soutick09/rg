@@ -14,24 +14,24 @@ def is_enabled(value, default):
 
 
 # Mandatory variables for the bot to start
-API_ID = int(os.environ.get("API_ID", 0))  # Default to 0 if not set
-API_HASH = os.environ.get("API_HASH", "")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "")  # Bot token from @BotFather
+API_ID = int(os.environ.get("API_ID", 26975590))  # Default to 0 if not set
+API_HASH = os.environ.get("API_HASH", "9fa30733d7a99b212485393e6b5c5ceb")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7065180942:AAEqo9Tn0PMpdLjBfk-wYO2DNZ80gygsXMA")  # Bot token from @BotFather
 ADMINS = (
-    [int(i.strip()) for i in os.environ.get("ADMINS", "").split(",")]
+    [int(i.strip()) for i in os.environ.get("ADMINS", "5827289728").split(",")]
     if os.environ.get("ADMINS")
     else []
 )
 
 DATABASE_NAME = os.environ.get("DATABASE_NAME", "Shortnerbot")
-DATABASE_URL = os.environ.get("DATABASE_URL", "")  # MongoDB URI
-OWNER_ID = int(os.environ.get("OWNER_ID", 0))  # Default to 0 if not set
+DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://shortnerbot:GkeGvUjcRGOunkoi@shortnerbot.cfwbjti.mongodb.net/?retryWrites=true&w=majority&appName=Shortnerbot")  # MongoDB URI
+OWNER_ID = int(os.environ.get("OWNER_ID", 7272399911))  # Default to 0 if not set
 if OWNER_ID and OWNER_ID not in ADMINS:
     ADMINS.append(OWNER_ID)
 
 # Optional variables
-LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "0"))  # Default to 0
-UPDATE_CHANNEL = int(os.environ.get("UPDATE_CHANNEL", "0"))  # Default to 0
+LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002434243644"))  # Default to 0
+UPDATE_CHANNEL = int(os.environ.get("UPDATE_CHANNEL", "-1002481328926"))  # Default to 0
 BROADCAST_AS_COPY = is_enabled(os.environ.get("BROADCAST_AS_COPY", "False"), False)
 IS_PRIVATE = is_enabled(os.environ.get("IS_PRIVATE", "False"), False)
 SOURCE_CODE = os.environ.get("SOURCE_CODE", "https://t.me/Soutick_09")
