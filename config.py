@@ -5,6 +5,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
+# Debug: Print environment variables to verify they are loaded
+print("API_ID:", os.getenv("API_ID"))
+print("API_HASH:", os.getenv("API_HASH"))
+print("BOT_TOKEN:", os.getenv("BOT_TOKEN"))
+
 def is_enabled(value, default):
     if isinstance(value, str):
         if value.lower() in ["true", "yes", "1", "enable", "y"]:
